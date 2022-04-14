@@ -14,7 +14,7 @@ def create_dataframe_day_ahead_prices(countries_day_ahead_prices: list, remove_o
     df_total = pd.DataFrame()
 
     for country in countries_day_ahead_prices:
-        day_ahead_prices = pd.read_csv(f'./data/day_ahead_prices/day_ahead_prices_{country}.csv')
+        day_ahead_prices = pd.read_csv(f'./data/raw/day_ahead_prices/day_ahead_prices_{country}.csv')
         day_ahead_prices.set_index('Unnamed: 0', inplace=True)
         day_ahead_prices.index = pd.to_datetime(day_ahead_prices.index, utc=True)
         day_ahead_prices.rename(columns={"0":f"{country}"}, inplace=True)
@@ -182,7 +182,7 @@ def create_dataframe_residual_load(countries_load: list, remove_outlier: bool = 
         globals()[f"residual_load_{country}"][f"non_dispatchable_{country}"].interpolate(method='time', limit_direction='forward', axis=0, inplace=True)
         globals()[f"residual_load_{country}"][f"non_dispatchable_{country}"].interpolate(method='time', limit_direction='backward', axis=0, inplace=True)
         globals()[f"residual_load_{country}"][f"residual_load_{country}"] = globals()[f"residual_load_{country}"][f"load_{country}"] - globals()[f"residual_load_{country}"][f"non_dispatchable_{country}"]
-        globals()[f"residual_load_{country}"].to_csv(f"./data/residual_load/residual_load_{country}.csv")
+        globals()[f"residual_load_{country}"].to_csv(f"./data/raw/residual_load/residual_load_{country}.csv")
         df_total = df_total.join(globals()[f"residual_load_{country}"], how='outer') 
 
     df_total.index.names = ['Date']
