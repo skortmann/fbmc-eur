@@ -1,3 +1,6 @@
+# !/usr/local/bin/python
+# -*- coding: utf-8 -*-
+
 __author__ = 'Steffen Kortmann'
 __email__ = 'steffen.kortmann@rwth-aachen.de'
 __version__ = '0.1'
@@ -6,6 +9,12 @@ import logging
 import pandas as pd
 import numpy as np
 import timing
+
+import sys
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from data.create_folder import *
 from data.import_data import *
