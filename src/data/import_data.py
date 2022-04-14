@@ -38,7 +38,7 @@ def import_load(countries_load: list) -> object:
 def import_wind_solar_forecast(countries_wind_solar_forecast: list) -> object:
 
     for country in countries_wind_solar_forecast:
-        print(f"Current import of load for country-code: {country}")
+        print(f"Current import of wind_solar_forecast for country-code: {country}")
         try:
             globals()[f"wind_solar_forecast_{country}"] = client.query_wind_and_solar_forecast(country, start=start,end=end, psr_type=None)
             globals()[f"wind_solar_forecast_{country}"].index = pd.to_datetime(
