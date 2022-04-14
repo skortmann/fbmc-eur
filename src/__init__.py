@@ -16,19 +16,19 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from data.create_folder import *
-from data.import_data import *
 from bidding_zones import *
-from visualization.plot_scatter_matrix import *
-from data.create_dataframe import *
-from visualization.plot_statistical_analysis import *
-from models.time_series_clustering import *
-from models.k_means_clustering import *
-from models.decision_tree import *
-from visualization.plot_dispatch import *
-from visualization.plot_price_spread import *
-from visualization.plot_cross_zonal_exchanges import *
-from features.data_processing import *
+from src.data.create_folder import *
+from src.data.import_data import *
+from src.visualization.plot_scatter_matrix import *
+from src.data.create_dataframe import *
+from src.visualization.plot_statistical_analysis import *
+from src.models.time_series_clustering import *
+from src.models.k_means_clustering import *
+from src.models.decision_tree import *
+from src.visualization.plot_dispatch import *
+from src.visualization.plot_price_spread import *
+from src.visualization.plot_cross_zonal_exchanges import *
+from src.features.data_processing import *
 
 def import_data(countries:list):
         import_load(countries_load=countries)

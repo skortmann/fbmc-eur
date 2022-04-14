@@ -18,7 +18,7 @@ from matplotlib import cm, colors
 import color_blinded
 plt.cm.register_cmap('sunset', color_blinded.tol_cmap('sunset'))
 
-from data.create_dataframe import create_dataframe_day_ahead_prices
+from src.data.create_dataframe import create_dataframe_day_ahead_prices
 import bidding_zones
 
 def plot_mean_joyplot(df_total:pd.DataFrame, countries:list):

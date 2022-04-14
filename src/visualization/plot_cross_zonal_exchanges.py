@@ -3,7 +3,7 @@ import numpy as np
 from datetime import date
 
 from bidding_zones import BIDDING_ZONES_CWE
-from data.create_dataframe import create_dataframe_scheduled_exchanges
+from src.data.create_dataframe import create_dataframe_scheduled_exchanges
 
 import matplotlib.pyplot as plt
 from matplotlib import cm

@@ -7,7 +7,7 @@ from entsoe import EntsoePandasClient
 
 from bidding_zones import *
 from helper import TimeoutException
-import data.parse_countries
+import src.data.parse_countries
 
 client = EntsoePandasClient(api_key="e3547493-771f-47ae-9df6-d61cee2a5ffa")
 
@@ -61,7 +61,7 @@ def import_generation(countries_generation: list) -> object:
 
     list_of_no_generation_import = ["AT", "IT_SUD", "IT_CNOR", "NL"]
     for country in list_of_no_generation_import:
-        data.parse_countries.parser(country_code=country)
+        src.data.parse_countries.parser(country_code=country)
 
     for country in countries_generation:
         if country in list_of_no_generation_import: continue

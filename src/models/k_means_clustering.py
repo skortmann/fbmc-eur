@@ -10,7 +10,7 @@ from sklearn.metrics import pairwise_distances_argmin
 
 from kneed import DataGenerator, KneeLocator
 
-from data.create_dataframe import create_dataframe_residual_load
+from src.data.create_dataframe import create_dataframe_residual_load
 from helper import split_years
 from datetime import timedelta, date
 

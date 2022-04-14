@@ -6,7 +6,7 @@ from tslearn.clustering import TimeSeriesKMeans, KShape
 from tslearn.datasets import CachedDatasets
 from tslearn.preprocessing import TimeSeriesScalerMeanVariance, TimeSeriesResampler, TimeSeriesScalerMinMax
 
-from data.create_dataframe import create_dataframe_residual_load
+from src.data.create_dataframe import create_dataframe_residual_load
 from helper import split_years
 from datetime import timedelta, date
 

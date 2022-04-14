@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from data.create_dataframe import create_dataframe_generation, create_dataframe_load, create_dataframe_residual_load, create_dataframe_net_positons
+from src.data.create_dataframe import create_dataframe_generation, create_dataframe_load, create_dataframe_residual_load, create_dataframe_net_positons
 
 import matplotlib.pyplot as plt
 plt.style.use(['science'])

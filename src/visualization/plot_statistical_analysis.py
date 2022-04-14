@@ -6,7 +6,7 @@ from pandas._libs.tslibs import timestamps
 from pandas.io.parsers import read_csv
 from bidding_zones import *
 
-from data.create_dataframe import *
+from src.data.create_dataframe import *
 
 import matplotlib.pyplot as plt
 plt.style.use('science')
